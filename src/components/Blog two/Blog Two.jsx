@@ -1,11 +1,11 @@
 import React from "react";
-import Blogtwo from "./Blogtwo";
+import Hero from "./Hero";
 import NewsAndJournals from "./NewsAndJournals";
 import Footer from "./Footer";
 const Blog = () => {
   return (
     <div>
-      <Blogtwo />
+      <Hero />
       <NewsAndJournals />
       <Footer />
     </div>

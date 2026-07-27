@@ -1,5 +1,24 @@
 import React from "react";
-import { heroData } from "./Data";
+
+import bgImg1 from "../../assets/1- Home One imgs/FooterOneBackground3.avif";
+import bgImg2 from "../../assets/1- Home One imgs/TestimonialBackground.avif";
+import img1 from "../../assets/1- Home One imgs/Achievements.webp";
+import img2 from "../../assets/1- Home One imgs/TrustedByImage.avif";
+import BannerGirl from "../../assets/1- Home One imgs/BannerGirl.webp";
+
+export const heroData = {
+  bgImg1,
+  bgImg2,
+  img1,
+  img2,
+  BannerGirl,
+
+  titleSmall: "Online learning",
+  titleMain: "More than 25000+ courses",
+  description:
+    "Lorem ipsum dolor sit amet consectetur. Gravida enim risus sollicitudin mauris tincidunt commodo ornare.",
+  buttonText: "Get Started",
+};
 
 export default function Hero() {
   const {
@@ -8,7 +27,6 @@ export default function Hero() {
     img1,
     img2,
     BannerGirl,
-
     titleSmall,
     titleMain,
     description,
@@ -16,63 +34,61 @@ export default function Hero() {
   } = heroData;
 
   return (
-    <section className="relative  p-8 min-h-screen overflow-hidden">
-      {/* BACKGROUND IMAGE 1 */}
+    <section className="relative min-h-screen overflow-hidden p-8">
+      {/* BACKGROUND */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${bgImg1})` }}
       >
-        {/* BACKGROUND IMAGE 2 */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay"
           style={{ backgroundImage: `url(${bgImg2})` }}
-        ></div>
+        />
 
-        {/* DARK OVERLAY */}
-        <div className="absolute inset-0 bg-[#0F252A]"></div>
+        <div className="absolute inset-0 bg-[#0F252A]/80" />
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto h-full flex flex-col-reverse lg:flex-row items-center px-6">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center px-6 lg:flex-row">
         {/* LEFT SIDE */}
-        <div className="w-full lg:w-1/2 relative flex justify-center items-center mt-10 lg:mt-0">
-          {/* GIRL IMAGE */}
+        <div className="relative mt-10 flex w-full items-center justify-center lg:mt-0 lg:w-1/2">
           <img
             src={BannerGirl}
-            alt="girl"
-            className="relative z-30 w-[240px] sm:w-[300px] md:w-[380px] lg:w-[550px] drop-shadow-2xl"
+            alt="Student learning online"
+            className="relative z-30 w-[240px] drop-shadow-2xl sm:w-[300px] md:w-[380px] lg:w-[550px]"
           />
 
-          {/* IMG 1 FRONT */}
           <img
             src={img1}
-            alt="decor1"
-            className="absolute z-50 left-15 top-90 -translate-y-1/2 w-16 sm:w-24 md:w-50 rounded-xl shadow-xl"
+            alt="Achievement information"
+            className="absolute left-4 top-1/2 z-50 w-16 -translate-y-1/2 rounded-xl shadow-xl sm:w-24 md:w-48"
           />
 
-          {/* IMG 2 FRONT */}
           <img
             src={img2}
-            alt="decor2"
-            className="absolute z-50 right-14 bottom-3 w-16 sm:w-24 md:w-60 rounded-xl shadow-xl"
+            alt="Trusted students information"
+            className="absolute bottom-3 right-4 z-50 w-16 rounded-xl shadow-xl sm:w-24 md:w-56"
           />
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="w-full lg:w-1/2 text-white text-center lg:text-left">
-          <h5 className="text-sm uppercase tracking-widest text-cyan-400 mb-3">
+        <div className="w-full text-center text-white lg:w-1/2 lg:text-left">
+          <h5 className="mb-3 text-sm uppercase tracking-widest text-cyan-400">
             {titleSmall}
           </h5>
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <h1 className="text-3xl font-bold leading-tight md:text-5xl lg:text-6xl">
             {titleMain}
           </h1>
 
-          <p className="mt-5 text-gray-200 max-w-md mx-auto lg:mx-0">
+          <p className="mx-auto mt-5 max-w-md text-gray-200 lg:mx-0">
             {description}
           </p>
 
-          <button className="mt-6 bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-full transition hover:scale-105">
+          <button
+            type="button"
+            className="mt-6 rounded-full bg-cyan-500 px-6 py-3 transition hover:scale-105 hover:bg-cyan-600"
+          >
             {buttonText}
           </button>
         </div>

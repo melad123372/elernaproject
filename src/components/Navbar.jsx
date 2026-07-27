@@ -76,7 +76,7 @@ const menus = [
       { name: "Pricing Two", path: "/pricing-two" },
       { name: "Pricing Three", path: "/pricing-three" },
       { name: "Career", path: "/career" },
-      { name: "Events", path: "/events" },
+      { name: "Event", path: "/event" },
       { name: "Team", path: "/team" },
     ],
   },

@@ -1,7 +1,25 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { testimonials } from "./Data";
+
+import userImg from "../../assets/1- Home One imgs/TestimonialAuthorImage.avif";
+import userImg2 from "../../assets/1- Home One imgs/TestimonialAuthorImage-2.avif";
+
+export const testimonials = [
+  {
+    image: userImg,
+    name: "Linda Grady",
+    role: "CO-ASSISTANT MANAGER",
+    text: "Lorem ipsum dolor“Lorem ipsum dolor sit amet consectetur. Adipiscing eget risus tempus facilisis scelerisque vitae consectetur vitae. Amet faucibus venenatis donec mattis. Morbi placerat eleifend malesuada sed semper quis.” sit ametconsectetur. Adipiscing eget risus tempus facilisis scelerisque vitae consectetur vitae.",
+  },
+  {
+    image: userImg2,
+    name: "John Smith",
+    role: "WEB DEVELOPER",
+    text: "Amazing learning “Lorem ipsum dolor sit amet consectetur. Molestie faucibus nibh felis tempor vel aliquet cursus placerat duis. Est felis pulvinar tortor ut nibh montes ante gravida velit. Facilisi posuere in sed mattis blandit duis aliquet.”experience and very professional teachers.",
+  },
+];
+
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
 
