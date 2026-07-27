@@ -3,36 +3,36 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
-import Navbar from "./Components/Navbar";
+import Navbar from "./components/Navbar";
 
-import Home from "./components/Home One/Home One";
-import HomeTwo from "./components/Home Two/Home Two";
-import HomeThree from "./components/Home Three/Home Three";
+import Home from "./components/Home one/Home One";
+import HomeTwo from "./components/Home two/Home Two";
+import HomeThree from "./components/Home three/Home Three";
 
-import About from "./components/About One/About One";
-import AboutTwo from "./components/About Two/About Two";
+import About from "./components/About one/About One";
+import AboutTwo from "./components/About two/About Two";
 
-import Course from "./components/Course One/Course One";
-import CourseTwo from "./components/Course Two/Course Two";
-import CourseThree from "./components/Course Three/Course Three";
+import Course from "./components/Course one/Course One";
+import CourseTwo from "./components/Course two/Course Two";
+import CourseThree from "./components/Course three/Course Three";
 
-import Faq from "./components/Faq/Hero";
+import Faq from "./components/FAQ/Hero";
 
-import Pricing from "./components/Pricing One/Pricing One";
-import PricingTwo from "./Components/Pricing Two/Pricing Two";
-import PricingThree from "./Components/Pricing Three/Pricing Three";
+import Pricing from "./components/Pricing one/Pricing One";
+import PricingTwo from "./components/Pricing Two/Pricing Two";
+import PricingThree from "./components/Pricing Three/Pricing Three";
 
 import Career from "./components/Career/Hero";
 import Event from "./components/Event/Hero";
-import Team from "./Components/Team/Team";
+import Team from "./components/Team/Team";
 
-import Blog from "./Components/Blog One/Blog One";
-import BlogTwo from "./components/Blog Two/Blog Two";
-import BlogThree from "./components/Blog Three/Blog Three";
+import Blog from "./components/Blog one/Blog One";
+import BlogTwo from "./components/Blog two/Blog Two";
+import BlogThree from "./components/Blog three/Blog Three";
 
-import Contact from "./components/Contact One/Contact One";
-import ContactTwo from "./components/Contact Two/Contact Two";
-import ContactThree from "./components/Contact Three/Contact Three";
+import Contact from "./components/Contact one/Contact One";
+import ContactTwo from "./components/Contact two/Contact Two";
+import ContactThree from "./components/Contact three/Contact Three";
 
 export default function App() {
   return (
@@ -41,6 +41,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/home-one" element={<Home />} />
         <Route path="/home-two" element={<HomeTwo />} />
         <Route path="/home-three" element={<HomeThree />} />
