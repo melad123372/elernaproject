@@ -16,14 +16,14 @@ import Course from "./components/Course one/Course One";
 import CourseTwo from "./components/Course two/Course Two";
 import CourseThree from "./components/Course three/Course Three";
 
-import Faq from "./components/FAQ/Hero";
+import Faq from "./components/Faq/Faq";
 
 import Pricing from "./components/Pricing one/Pricing One";
 import PricingTwo from "./components/Pricing Two/Pricing Two";
 import PricingThree from "./components/Pricing Three/Pricing Three";
 
 import Career from "./components/Career/Hero";
-import Event from "./components/Event/Hero";
+import Event from "./components/Event/Event";
 import Team from "./components/Team/Team";
 
 import Blog from "./components/Blog one/Blog One";

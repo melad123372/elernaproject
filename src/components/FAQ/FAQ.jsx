@@ -1,11 +1,11 @@
 import React from "react";
-import FAQ from "./Hero";
 import FAQSection from "./FAQSection";
 import Footer from "./Footer";
+import Hero from "./Hero";
 const faq1 = () => {
   return (
     <div>
-      <FAQ />
+      <Hero />
       <FAQSection />
       <Footer />
     </div>

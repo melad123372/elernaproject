@@ -48,115 +48,154 @@ export default function Categories() {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="py-20 px-5 md:px-10"
+      viewport={{ once: true, amount: 0.1 }}
+      className="overflow-hidden px-4 py-14 sm:px-6 md:px-10 md:py-20"
     >
       <div
         className="
-        max-w-7xl
-        mx-auto
-        grid
-        grid-cols-1
-        lg:grid-cols-3
-        gap-10
+          mx-auto
+          grid
+          max-w-7xl
+          grid-cols-1
+          items-center
+          gap-10
+          lg:grid-cols-3
+          lg:gap-12
         "
       >
-        {/* Left content */}
-
-        <div className="lg:pr-10 py-10">
+        {/* LEFT CONTENT */}
+        <div
+          className="
+            flex
+            flex-col
+            items-center
+            py-2
+            text-center
+            lg:items-start
+            lg:py-10
+            lg:pr-10
+            lg:text-left
+          "
+        >
           <p
             className="
-          text-sm
-          font-semibold
-          uppercase
-          text-slate-800
-          mb-6
-          "
+              mb-4
+              text-sm
+              font-semibold
+              uppercase
+              tracking-wider
+              text-slate-800
+              sm:mb-6
+            "
           >
             Top Categories
           </p>
 
           <h1
             className="
-            text-5xl
-            md:text-4xl
-            font-bold
-            text-slate-900
-            leading-tight
+              text-center
+              text-[32px]
+              font-bold
+              leading-tight
+              text-slate-900
+              sm:text-4xl
+              md:text-[44px]
+              lg:text-left
+              lg:text-5xl
             "
           >
             Discover leading
-            <br />
-            categories
+            <br className="hidden sm:block" />
+            <span className="sm:ml-2 lg:ml-0 lg:block">categories</span>
           </h1>
 
           <button
+            type="button"
             className="
-            mt-10
-            bg-slate-900
-            text-white
-            px-12
-            py-3
-            rounded-md
-            text-lg
-            hover:bg-slate-800
-            transition
+              mt-7
+              rounded-md
+              bg-slate-900
+              px-9
+              py-3
+              text-base
+              font-medium
+              text-white
+              transition
+              duration-300
+              hover:bg-slate-800
+              sm:mt-10
+              sm:px-12
+              sm:text-lg
             "
           >
             Get Started
           </button>
         </div>
 
-        {/* Cards */}
-
+        {/* CATEGORY CARDS */}
         <div
           className="
-          lg:col-span-2
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          xl:grid-cols-3
-          gap-10
-          p-5
-          ml-10
+            grid
+            grid-cols-2
+            gap-3
+            sm:gap-5
+            lg:col-span-2
+            lg:grid-cols-2
+            lg:gap-8
+            xl:grid-cols-3
           "
         >
           {categories.map((item, index) => (
             <motion.div
-              key={index}
+              key={item.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.5,
-                delay: index * 0.1,
+                delay: index * 0.08,
               }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               className="
-              border
-              border-slate-200
-              rounded-md
-              h-60
-              flex
-              flex-col
-              items-center
-              justify-center
-              text-center
-              hover:shadow-lg
-              transition
-              "
-            >
-              <div
-                className="
-                w-15
-                h-15
-                rounded-full
-                bg-slate-100
                 flex
+                min-h-[190px]
+                min-w-0
+                flex-col
                 items-center
                 justify-center
-                text-4xl
-                text-slate-800
-                mb-6
+                rounded-md
+                border
+                border-slate-200
+                px-2
+                py-5
+                text-center
+                transition
+                duration-300
+                hover:-translate-y-1
+                hover:border-slate-300
+                hover:shadow-lg
+                sm:min-h-[220px]
+                sm:px-4
+                lg:h-60
+              "
+            >
+              {/* ICON */}
+              <div
+                className="
+                  mb-4
+                  flex
+                  h-[52px]
+                  w-[52px]
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-slate-100
+                  text-2xl
+                  text-slate-800
+                  sm:mb-6
+                  sm:h-[60px]
+                  sm:w-[60px]
+                  sm:text-3xl
+                  lg:text-4xl
                 "
               >
                 {item.icon}
@@ -164,10 +203,15 @@ export default function Categories() {
 
               <h3
                 className="
-                text-xl
-                font-bold
-                text-slate-900
-                max-w-[180px]
+                  max-w-[150px]
+                  break-words
+                  text-sm
+                  font-bold
+                  leading-snug
+                  text-slate-900
+                  sm:max-w-[180px]
+                  sm:text-lg
+                  lg:text-xl
                 "
               >
                 {item.title}
@@ -175,9 +219,12 @@ export default function Categories() {
 
               <p
                 className="
-                mt-4
-                text-gray-500
-                text-lg
+                  mt-3
+                  text-xs
+                  text-gray-500
+                  sm:mt-4
+                  sm:text-base
+                  lg:text-lg
                 "
               >
                 {item.courses}

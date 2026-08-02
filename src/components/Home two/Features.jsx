@@ -5,107 +5,222 @@ import leimg from "../../assets/11- Home Two Imgs/WomanImage.webp";
 import Timg7 from "../../assets/11- Home Two Imgs/Videoposter.jpg";
 
 const stats = [
-  { value: "1.5K", label: "FINISH SESSIONS" },
-  { value: "7.8K", label: "ENROLLED" },
-  { value: "100%", label: "JOB PLACEMENT" },
+  {
+    value: "1.5K",
+    label: "FINISH SESSIONS",
+  },
+  {
+    value: "7.8K",
+    label: "ENROLLED",
+  },
+  {
+    value: "100%",
+    label: "JOB PLACEMENT",
+  },
 ];
 
 const WhyWeAreSection = () => {
   return (
-    <section className="py-20 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="overflow-hidden bg-white py-14 md:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
         {/* TOP HEADING */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="mb-10 text-center md:mb-14"
         >
-          <p className="text-sm uppercase tracking-[4px] text-gray-500">
+          <p
+            className="
+              text-xs
+              font-medium
+              uppercase
+              tracking-[4px]
+              text-gray-500
+              sm:text-sm
+            "
+          >
             Why we are
           </p>
 
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-3 leading-tight">
+          <h2
+            className="
+              mx-auto
+              mt-3
+              max-w-4xl
+              text-[30px]
+              font-bold
+              leading-tight
+              text-gray-900
+              sm:text-4xl
+              md:text-5xl
+            "
+          >
             World-class learning from anywhere
           </h2>
         </motion.div>
 
         {/* MAIN CONTENT */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* LEFT SIDE IMAGES */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            items-center
+            gap-10
+            lg:grid-cols-2
+            lg:gap-14
+          "
+        >
+          {/* IMAGES */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.7 }}
-            className="flex items-end justify-center gap-5"
-          >
-            {/* SMALL IMAGE */}
-            <motion.img
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              src={Timg7}
-              alt="Learning"
-              className="
-                w-32 h-44
-                md:w-48 md:h-64
-                mb-20
-                object-cover rounded-2xl
-              "
-            />
+            className="
+              flex
+              w-full
+              flex-col
+              gap-7
+              sm:gap-8
 
-            {/* BIG IMAGE */}
-            <motion.img
-              initial={{ opacity: 0, y: -40 }}
+              lg:flex-row
+              lg:items-end
+              lg:justify-center
+              lg:gap-5
+            "
+          >
+            {/* FIRST IMAGE */}
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              src={leimg}
-              alt="Learning"
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.6 }}
               className="
-                w-56 h-72
-                md:w-80 md:h-[450px]
-                object-cover rounded-2xl
+                aspect-[16/10]
+                w-full
+                overflow-hidden
+                rounded-xl
+                sm:rounded-2xl
+
+                lg:mb-20
+                lg:aspect-auto
+                lg:h-64
+                lg:w-48
               "
-            />
+            >
+              <img
+                src={Timg7}
+                alt="Online learning session"
+                className="
+                  h-full
+                  w-full
+                  object-cover
+                  object-center
+                "
+              />
+            </motion.div>
+
+            {/* SECOND IMAGE */}
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="
+                aspect-[4/5]
+                w-full
+                overflow-hidden
+                rounded-xl
+                sm:rounded-2xl
+
+                lg:aspect-auto
+                lg:h-[450px]
+                lg:w-80
+              "
+            >
+              <img
+                src={leimg}
+                alt="Woman learning online"
+                className="
+                  h-full
+                  w-full
+                  object-cover
+                  object-center
+                "
+              />
+            </motion.div>
           </motion.div>
 
-          {/* RIGHT SIDE CONTENT */}
+          {/* RIGHT CONTENT */}
           <div className="space-y-7">
             {/* DESCRIPTION */}
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5 }}
-              className="text-gray-500 leading-relaxed text-base md:text-lg"
+              className="
+                text-center
+                text-base
+                leading-7
+                text-gray-500
+                sm:text-lg
+                sm:leading-8
+                lg:text-left
+              "
             >
               Lorem ipsum dolor sit amet consectetur. Pellentesque id quam
               mauris mus. Vitae diam dolor lacus amet integer ut.
             </motion.p>
 
             {/* STATS */}
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid grid-cols-3 gap-2 sm:gap-5">
               {stats.map((item, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
+                  key={item.label}
+                  initial={{ opacity: 0, y: 25 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{
                     duration: 0.5,
-                    delay: index * 0.2,
+                    delay: index * 0.12,
                   }}
-                  className="text-center"
+                  className="
+                    min-w-0
+                    rounded-lg
+                    bg-gray-50
+                    px-1
+                    py-5
+                    text-center
+                    sm:px-3
+                    sm:py-6
+                  "
                 >
-                  <h3 className="text-2xl md:text-4xl font-bold text-gray-900">
+                  <h3
+                    className="
+                      text-2xl
+                      font-bold
+                      text-gray-900
+                      sm:text-3xl
+                      md:text-4xl
+                    "
+                  >
                     {item.value}
                   </h3>
 
-                  <p className="text-xs md:text-sm text-gray-500 mt-2">
+                  <p
+                    className="
+                      mt-2
+                      text-[9px]
+                      font-medium
+                      leading-4
+                      text-gray-500
+                      sm:text-xs
+                      md:text-sm
+                    "
+                  >
                     {item.label}
                   </p>
                 </motion.div>
@@ -114,38 +229,49 @@ const WhyWeAreSection = () => {
 
             {/* CTA BOX */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5 }}
               className="
-                bg-blue-50 
-                p-6 md:p-8
-                rounded-xl
-                flex flex-col md:flex-row
-                items-start md:items-center
+                flex
+                flex-col
+                items-start
                 justify-between
                 gap-5
+                rounded-xl
+                bg-blue-50
+                p-5
+                sm:p-6
+                md:flex-row
+                md:items-center
+                md:p-8
               "
             >
               <div>
-                <h4 className="font-semibold text-gray-900 text-lg">
+                <h4 className="text-lg font-semibold text-gray-900">
                   Still have questions?
                 </h4>
 
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="mt-2 text-sm leading-6 text-gray-500">
                   Lorem ipsum dolor sit amet consectetur.
                 </p>
               </div>
 
               <button
+                type="button"
                 className="
-                  px-6 py-3
-                  bg-gray-900
-                  text-white
+                  w-full
                   rounded-lg
-                  hover:bg-gray-800
+                  bg-gray-900
+                  px-6
+                  py-3
+                  font-medium
+                  text-white
                   transition
+                  duration-300
+                  hover:bg-gray-800
+                  md:w-auto
                 "
               >
                 Get Started

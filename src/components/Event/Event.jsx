@@ -1,11 +1,11 @@
 import React from "react";
-import Event from "./Event";
 import EventsSection from "./EventsSection";
 import Footer from "./Footer";
+import Hero from "./Hero";
 const Event1 = () => {
   return (
     <div>
-      <Event />
+      <Hero />
       <EventsSection />
       <Footer />
     </div>

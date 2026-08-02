@@ -7,25 +7,25 @@ import leimg4 from "../../assets/11- Home Two Imgs/PotentialImage-4.webp";
 
 const data = [
   {
-    id: "1",
+    id: "01",
     title: "Flexibility and convenience",
     desc: "Lorem ipsum dolor sit amet consectetur. Lectus faucibus eu lectus malesuada morbi in quam donec a pellentesque risus.",
     img: leimg1,
   },
   {
-    id: "2",
+    id: "02",
     title: "Course accessibility",
     desc: "Lorem ipsum dolor sit amet consectetur. Lectus faucibus eu lectus malesuada morbi in quam donec a pellentesque risus.",
     img: leimg2,
   },
   {
-    id: "3",
+    id: "03",
     title: "Cost-effectiveness",
     desc: "Lorem ipsum dolor sit amet consectetur. Lectus faucibus eu lectus malesuada morbi in quam donec a pellentesque risus.",
     img: leimg3,
   },
   {
-    id: "4",
+    id: "04",
     title: "Personalized learning",
     desc: "Lorem ipsum dolor sit amet consectetur. Lectus faucibus eu lectus malesuada morbi in quam donec a pellentesque risus.",
     img: leimg4,
@@ -40,7 +40,7 @@ export default function LearningSection() {
       {/* HEADER */}
       <div
         className="
-          px-5
+          px-4
           py-12
           text-center
           sm:px-6
@@ -68,11 +68,10 @@ export default function LearningSection() {
             mx-auto
             mt-4
             max-w-5xl
-            text-2xl
+            text-[27px]
             font-bold
-            leading-tight
+            leading-[1.25]
             text-[#112a30]
-            sm:mt-5
             sm:text-3xl
             md:text-4xl
             lg:text-5xl
@@ -84,18 +83,116 @@ export default function LearningSection() {
         </h1>
       </div>
 
-      {/* IMAGE AND CARDS */}
+      {/* ================= MOBILE DESIGN ================= */}
+      <div
+        className="
+          space-y-4
+          px-0
+          pb-5
+          md:hidden
+        "
+      >
+        {data.map((item) => (
+          <article
+            key={item.id}
+            className="
+              relative
+              min-h-[390px]
+              w-full
+              overflow-hidden
+              bg-[#10252a]
+            "
+          >
+            {/* MOBILE IMAGE */}
+            <img
+              src={item.img}
+              alt={item.title}
+              className="
+                absolute
+                inset-0
+                h-full
+                w-full
+                object-cover
+                object-center
+              "
+            />
+
+            {/* MOBILE DARK OVERLAY */}
+            <div
+              className="
+                absolute
+                inset-0
+                bg-gradient-to-b
+                from-black/25
+                via-black/35
+                to-black/90
+              "
+            />
+
+            {/* MOBILE CONTENT */}
+            <div
+              className="
+                relative
+                z-10
+                flex
+                min-h-[390px]
+                flex-col
+                justify-center
+                px-6
+                py-10
+                text-white
+              "
+            >
+              <span
+                className="
+                  text-[38px]
+                  font-bold
+                  leading-none
+                "
+              >
+                {item.id}
+              </span>
+
+              <h2
+                className="
+                  mt-10
+                  text-[27px]
+                  font-bold
+                  leading-tight
+                "
+              >
+                {item.title}
+              </h2>
+
+              <p
+                className="
+                  mt-8
+                  max-w-[650px]
+                  text-[17px]
+                  font-medium
+                  leading-8
+                  text-white/75
+                "
+              >
+                {item.desc}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {/* ================= TABLET / DESKTOP DESIGN ================= */}
       <div
         className="
           relative
-          min-h-[960px]
+          hidden
+          min-h-[650px]
           overflow-hidden
-          sm:min-h-[920px]
-          md:min-h-[650px]
+          md:block
           lg:min-h-[700px]
         "
       >
-        {/* ACTIVE IMAGE */}
+        {/* ACTIVE BACKGROUND IMAGE */}
         <img
           key={activeImg}
           src={activeImg}
@@ -106,42 +203,32 @@ export default function LearningSection() {
             h-full
             w-full
             object-cover
-            object-top
+            object-center
             transition-all
             duration-700
-            sm:object-[55%_center]
-            md:object-center
           "
         />
 
-        {/* GRADIENT OVERLAY */}
+        {/* DESKTOP OVERLAY */}
         <div
           className="
             absolute
             inset-0
             bg-gradient-to-b
-            from-black/20
-            via-black/35
-            to-black/90
-            md:from-black/10
-            md:via-black/20
-            md:to-black/85
+            from-black/10
+            via-black/20
+            to-black/85
           "
         />
 
-        {/* CARDS */}
+        {/* DESKTOP CARDS */}
         <div
           className="
             relative
             z-10
             grid
-            min-h-[960px]
-            grid-cols-1
-            grid-rows-4
-            sm:min-h-[920px]
-            md:min-h-[650px]
-            md:grid-cols-4
-            md:grid-rows-1
+            min-h-[650px]
+            grid-cols-4
             lg:min-h-[700px]
           "
         >
@@ -158,28 +245,22 @@ export default function LearningSection() {
                 flex-col
                 justify-end
                 overflow-hidden
-                border-b
+                border-r
                 border-white/25
-                p-5
+                p-6
                 transition-colors
                 duration-500
                 hover:bg-black/15
-                sm:p-6
-                md:border-b-0
-                md:border-r
-                md:p-6
                 lg:p-8
                 xl:p-10
               "
             >
               <span
                 className="
-                  text-3xl
+                  text-4xl
                   font-bold
                   leading-none
                   text-white
-                  sm:text-4xl
-                  md:text-4xl
                   lg:text-5xl
                 "
               >
@@ -188,15 +269,12 @@ export default function LearningSection() {
 
               <h2
                 className="
-                  mt-3
+                  mt-5
                   max-w-xs
-                  text-lg
+                  text-xl
                   font-semibold
                   leading-snug
                   text-white
-                  sm:mt-4
-                  sm:text-xl
-                  md:mt-5
                   lg:text-2xl
                 "
               >
@@ -205,23 +283,18 @@ export default function LearningSection() {
 
               <p
                 className="
-                  mt-3
+                  mt-5
                   max-w-sm
-                  text-sm
-                  leading-6
+                  translate-y-full
+                  text-base
+                  leading-7
                   text-white/80
-                  opacity-100
+                  opacity-0
                   transition-all
                   duration-700
                   ease-out
-                  sm:mt-4
-                  sm:text-base
-                  sm:leading-7
-                  md:mt-5
-                  md:translate-y-full
-                  md:opacity-0
-                  md:group-hover:translate-y-0
-                  md:group-hover:opacity-100
+                  group-hover:translate-y-0
+                  group-hover:opacity-100
                   lg:leading-8
                 "
               >
