@@ -16,7 +16,7 @@ import Course from "./components/Course one/Course One";
 import CourseTwo from "./components/Course two/Course Two";
 import CourseThree from "./components/Course three/Course Three";
 
-import Faq from "./components/Faq/Faq";
+
 
 import Pricing from "./components/Pricing one/Pricing One";
 import PricingTwo from "./components/Pricing Two/Pricing Two";
@@ -33,6 +33,7 @@ import BlogThree from "./components/Blog three/Blog Three";
 import Contact from "./components/Contact one/Contact One";
 import ContactTwo from "./components/Contact two/Contact Two";
 import ContactThree from "./components/Contact three/Contact Three";
+import Faq from "./components/Faq/Faq";
 
 export default function App() {
   return (
