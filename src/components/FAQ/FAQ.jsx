@@ -7,7 +7,7 @@ function Faq() {
   return (
     <div>
       <Hero />
-      <FAQSection />
+      <FaqSection />
       <Footer />
     </div>
   );
