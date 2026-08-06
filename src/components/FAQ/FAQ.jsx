@@ -1,13 +1,13 @@
 import React from "react";
-import FaqSection from "./FaqSection";
 import Footer from "./Footer";
 import Hero from "./Hero";
+import FAQSection from "./FAQSection";
 
 function Faq() {
   return (
     <div>
       <Hero />
-      <FaqSection />
+      <FAQSection />
       <Footer />
     </div>
   );
