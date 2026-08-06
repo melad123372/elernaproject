@@ -31,7 +31,7 @@ import BlogThree from "./components/Blog three/Blog Three";
 import Contact from "./components/Contact one/Contact One";
 import ContactTwo from "./components/Contact two/Contact Two";
 import ContactThree from "./components/Contact three/Contact Three";
-import Faq from "./components/Faq/Faq";
+import Faq from "./components/FAQ/FAQ";
 
 export default function App() {
   return (
